@@ -1,0 +1,446 @@
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background:#f4f6f9;
+position:relative;
+}
+
+/* WATERMARK */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:url("images/images\ \(3\).jpg") repeat;
+
+background-size:250px;
+
+opacity:0.19;
+
+pointer-events:none;
+z-index:-1;
+}
+
+/* HEADER */
+
+.header{
+background:#0c3c6c;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 40px;
+background:#0b1e3a;
+color:white;
+}
+
+.logo{
+height:55px;
+border-radius: 5px;
+}
+
+.brand{
+font-size:24px;
+font-weight:600;
+}
+
+.brand{
+font-size:32px;
+letter-spacing:1px;
+}
+
+/* EUROPE ICONS */
+
+.europe-icons{
+margin-top:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+font-size:14px;
+}
+
+.europe-icons img{
+width:20px;
+transition:transform .3s;
+}
+
+.europe-icons img:hover{
+transform:scale(1.2);
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:90px 20px;
+background:white;
+}
+
+.hero h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+/* TRACK BOX */
+
+.track-box{
+margin-top:30px;
+}
+
+.track-box input{
+padding:15px;
+width:320px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:16px;
+}
+
+.track-box button{
+padding:15px 22px;
+border:none;
+background:#1a73e8;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.track-box button:hover{
+background:#0f5fd1;
+transform:translateY(-2px);
+}
+
+/* FEATURES */
+
+.features{
+display:flex;
+justify-content:center;
+gap:35px;
+padding:70px 20px;
+flex-wrap:wrap;
+}
+
+.feature{
+background:white;
+padding:30px;
+width:260px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+text-align:center;
+transition:.3s;
+}
+
+.feature i{
+font-size:30px;
+color:#1a73e8;
+margin-bottom:10px;
+}
+
+.feature:hover{
+transform:translateY(-8px);
+}
+
+/* RESULT CARD */
+
+.result{
+width:700px;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* PROGRESS BAR */
+
+.progress{
+display:flex;
+justify-content:space-between;
+margin-top:40px;
+}
+
+.step{
+width:120px;
+padding:12px;
+border-radius:6px;
+background:#ddd;
+text-align:center;
+font-size:14px;
+}
+
+.step.active{
+background:#1a73e8;
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+
+.tracking-card{
+width:700px;
+margin:70px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 8px 30px rgba(0,0,0,0.1);
+}
+
+.shipment-info{
+margin-top:20px;
+font-size:16px;
+}
+
+.timeline{
+margin-top:40px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.time-step{
+padding:14px;
+background:#eee;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.time-step.active{
+background:#1a73e8;
+color:white;
+}
+
+.customs{
+background:#ffe5b4;
+}
+
+.flagged{
+background:#ff4d4d;
+color:white;
+}
+
+
+
+.map-container{
+margin-top:40px;
+text-align:center;
+}
+
+.route{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.city{
+font-weight:bold;
+}
+
+.route-line{
+width:400px;
+height:6px;
+background:#ddd;
+position:relative;
+border-radius:10px;
+overflow:hidden;
+}
+
+#truck{
+position:absolute;
+top:-14px;
+left:0;
+font-size:28px;
+transition:1s linear;
+}
+
+.progress-bar{
+width:100%;
+height:10px;
+background:#ddd;
+border-radius:10px;
+margin-top:25px;
+overflow:hidden;
+}
+
+#progress{
+height:10px;
+width:0%;
+background:#1a73e8;
+transition:1s;
+}
+
+
+.alert{
+display:block;
+margin-top:5px;
+color:white;
+background:red;
+padding:4px 8px;
+border-radius:4px;
+font-size:12px;
+animation:flash 1s infinite;
+}
+
+@keyframes flash{
+
+0%{opacity:1}
+50%{opacity:0.2}
+100%{opacity:1}
+
+}
+
+.map-box{
+
+margin-top:40px;
+text-align:center;
+position:relative;
+
+}
+
+.world-map{
+
+width:100%;
+max-width:600px;
+opacity:0.8;
+
+}
+
+#plane{
+
+position:absolute;
+top:55%;
+left:20%;
+font-size:30px;
+transition:2s linear;
+
+}
+
+
+.tracking-card input{
+
+display:block;
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+
+}
+
+.tracking-card button{
+
+margin-top:15px;
+padding:12px;
+background:#1a73e8;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+.tracking-card button:hover{
+
+background:#125dc2;
+
+}
+
+
+/* CUSTOMS POPUP */
+
+.customs-popup{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+
+justify-content:center;
+align-items:center;
+z-index:9999;
+
+}
+
+.customs-box{
+
+background:white;
+padding:40px;
+border-radius:10px;
+text-align:center;
+width:400px;
+
+animation:popup 0.5s ease;
+
+}
+
+.customs-box h2{
+
+color:red;
+margin-bottom:10px;
+
+}
+
+.customs-box button{
+
+margin-top:20px;
+padding:10px 20px;
+border:none;
+background:#e63946;
+color:white;
+cursor:pointer;
+border-radius:5px;
+
+}
+
+@keyframes popup{
+
+from{
+transform:scale(0.5);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+
+/* MAP */
+
+#map{
+
+width:90%;
+height:400px;
+margin:40px auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+
+}

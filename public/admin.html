@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>EasyWay Admin</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+<img src="images/logo.jpg" class="logo">
+</header>
+
+
+<!-- CREATE SHIPMENT -->
+
+<div class="tracking-card">
+
+<h2>Create Shipment</h2>
+
+<input id="sender" placeholder="Sender Name">
+<input id="receiver" placeholder="Receiver Name">
+
+<button onclick="createShipment()">
+Create Shipment
+</button>
+
+<h3 id="trackingResult"></h3>
+
+</div>
+
+
+<!-- UPDATE SHIPMENT -->
+
+<div class="tracking-card">
+
+<h2>Update Shipment</h2>
+
+<input id="trackCode" placeholder="Tracking Number">
+
+<input id="adminLocation" placeholder="Location">
+
+<select id="status">
+<option>Shipment Picked Up</option>
+<option>In Transit</option>
+<option>Arrived Europe Hub</option>
+<option>Held at Customs</option>
+<option>Shipment Flagged</option>
+<option>Delivered</option>
+</select>
+
+<button onclick="updateShipment()">Update Shipment</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>EasyWay Courier Tracking</title>
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<header class="header">
+    <img src="images/logo.jpg" class="logo">
+</header>
+
+<div class="tracking-card">
+<div id="map"></div>
+
+<h2 id="trackingNumber"></h2>
+
+<div class="shipment-info">
+
+<p><strong>Sender:</strong> <span id="sender"></span></p>
+<p><strong>Receiver:</strong> <span id="receiver"></span></p>
+
+<p id="location"></p>
+<p id="status"></p>
+
+</div>
+
+<div class="map-container">
+
+<h3>Shipment Route</h3>
+
+<div class="route">
+
+<div class="city">Topeka Ks</div>
+
+<div class="route-line">
+<div id="truck">🚚</div>
+</div>
+
+<div class="city">Plymouth</div>
+
+</div>
+<div class="progress-bar">
+
+<div id="progress"></div>
+
+</div>
+
+</div>
+
+<div class="timeline">
+
+<div class="time-step" id="step1">📦 Shipment Picked Up</div>
+<div class="time-step" id="step2">✈ In Transit</div>
+<div class="time-step" id="step3">🌍 Arrived Europe Hub</div>
+<div class="time-step customs" id="step4">
+<span class="alert">Arriving</span>
+</div>
+<div class="time-step flagged" id="step5">🚫 Ready for Pickup</div>
+
+</div>
+
+</div>
+<div class="map-box">
+
+<h3>Shipment Route</h3>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" class="world-map">
+
+<div id="plane">✈</div>
+
+</div>
+
+<div id="customsPopup" class="customs-popup">
+
+<div class="customs-box">
+
+<h2>⚠ Shipment Held at Customs</h2>
+
+<p>
+Your shipment has been flagged by the Europe Customs Office.
+Please contact the customs office to clear the package.
+</p>
+
+<button onclick="closeCustoms()">Close</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
